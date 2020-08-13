@@ -57,6 +57,7 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
+            print(order)
             order.save()
             for item_id, item_data in bag.items():
                 try:
@@ -100,11 +101,13 @@ def checkout(request):
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
         stripe_total = round(total * 100)
+        print(stripe_total)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
+        print(intent)
 
         # Attempt to prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
