@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 html {
     height: 100%;
 }
@@ -7,8 +9,29 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Staatliches', cursive;
 }
+
+#topnav {
+    background-color: #d2dcff !important;
+}
+
+#bottomnav {
+    background-color:  #d2dcff!important;
+}
+
+#product-background {
+    background-color: #f9e7ff !important;
+}
+
+#card-header-colour {
+    background-color: #d2dcff !important;
+}
+
+#card-footer-colour {
+    background-color: #d2dcff !important;
+}
+
 
 /* from Bulma */
 .icon {
