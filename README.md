@@ -234,4 +234,3 @@ The background image on the front page was Designed by Freepik
 ### Acknowledgements
 
 - I received inspiration for this project from sites such as topshop and H&m.
-- I also used factors from the tutorial guides on the course to help me set up each part in order to get them to work.
